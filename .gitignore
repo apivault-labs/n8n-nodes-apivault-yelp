@@ -1,0 +1,6 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.npmrc
+_npm_token.txt
+_gh_token.txt
