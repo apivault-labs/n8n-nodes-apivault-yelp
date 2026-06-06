@@ -1,0 +1,55 @@
+{
+  "name": "n8n-nodes-apivault-yelp",
+  "version": "0.1.0",
+  "description": "n8n community node for Yelp Business Scraper — real-time data, no cache. Deep intelligence on any Yelp business: ratings, weekly hours with is-open-now, website tech stack (50+ platforms), emails (CloudFlare decoder + pattern guessing), phones E.164, social profiles, SEO + mobile audit, parsed address, lead score 0-100 + industry outreach pitch + one-click outreach links. CSV export. No login. Pay-as-you-go, no monthly fee.",
+  "license": "MIT",
+  "homepage": "https://apify.com/apivault_labs/yelp-business-scraper",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "yelp-scraper",
+    "yelp-business",
+    "lead-generation",
+    "b2b-prospecting",
+    "local-seo",
+    "business-intelligence",
+    "outreach-automation",
+    "crm-enrichment",
+    "apollo-alternative",
+    "apify"
+  ],
+  "author": {
+    "name": "apivault_labs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apivault-labs/n8n-nodes-apivault-yelp.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && copyfiles \"nodes/**/*.svg\" dist",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/ApifyApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Yelp/Yelp.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "copyfiles": "^2.4.1",
+    "n8n-workflow": "*",
+    "typescript": "^5.4.0"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
