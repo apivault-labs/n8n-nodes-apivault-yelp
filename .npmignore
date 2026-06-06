@@ -1,0 +1,11 @@
+node_modules/
+*.ts
+!*.d.ts
+tsconfig.json
+.gitignore
+_npm_token.txt
+_gh_token.txt
+.npmrc
+credentials/
+nodes/**/*.ts
+_deploy.py
